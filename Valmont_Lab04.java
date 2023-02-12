@@ -8,7 +8,12 @@
  */
 public class Valmont_Lab04 {
 
-    //This is the the driver of the program which begins with the main method
+    /**This is the the driver of the program which begins with the main method
+     * it intializes multiple TeeShirt and CustomTee objects as well as makes
+     * many method calls to the appropriate objects mutator methods and display methods.
+     * @param args unused 
+     * @return nothing
+     */
     public static void main(String[] args) {    
       //These initialize TeeShirt objects for use   
       TeeShirt tee1 = new TeeShirt();
@@ -46,7 +51,7 @@ public class Valmont_Lab04 {
    /**
     * *function name: display()
     * @param tee this is the variable name for TeeShirt objects
-    * this method displays ordernumber, description, and price of TeeShirt to user
+    * This method displays ordernumber, description, and price of TeeShirt to the user.
     */
    public static void display(TeeShirt tee)
    {
@@ -58,7 +63,7 @@ public class Valmont_Lab04 {
    /**
     * *function name: displayCustomData()
     * @param tee this is the variable name for CustomTee objects
-    * this method displays ordernumber, description, and price of TeeShirt to user
+    * This method displays ordernumber, description, and price of TeeShirt to user
     * by calling display() with the current CustomTee object
     * then displays the slogan to the user. 
     */
@@ -69,7 +74,7 @@ public class Valmont_Lab04 {
    }
 }
 /**
- * this TeeShirt class is the parent class of the CustomTee class. 
+ * This TeeShirt class is the parent class of the CustomTee class. 
  * there are 4 attributes to this class to set and get for Teeshirt objects.
  * @param (int) represents the ordernumber assigned of a Teeshirt object
  * @param (String) size represnets the size of a TeeShirt object
@@ -78,7 +83,7 @@ public class Valmont_Lab04 {
   */
 class TeeShirt
 {
-   //the following are attributes intialized for Teeshirt objects
+   //The following are attributes intialized for Teeshirt objects.
    private int orderNumber;
    private String size;
    private String color;
@@ -86,7 +91,7 @@ class TeeShirt
 
    /**
     * *function name: setOrderNumber()
-    * this method is the mutator method for the orderNumber attribute
+    * This method is the mutator method for the orderNumber attribute.
     * @param num this is the variable name for the order number being assigned to TeeShirt objects
     */
    public void setOrderNumber(int num)
@@ -95,13 +100,13 @@ class TeeShirt
    }
    /**
     * *function name: setSize()
-    * this is the mutuator method for the size attribute
+    * This is the mutuator method for the size attribute.
     * @param sz this is the variable name for the size being asssigned to TeeShirt objects
     */
    public void setSize(String sz)
    {
        size = sz; 
-       //this if else block checks the assigned size of the object then assigns the price as neccessary. 
+       //This if else block checks the assigned size of the object then assigns the price as neccessary. 
        if (size.equals("XXL") || size.equals("XXXL")){
             price = 22.99;
        }
@@ -111,7 +116,7 @@ class TeeShirt
    }
    /**
     * *function name: setColor()
-    * this is the mutator method for the color attribute
+    * This is the mutator method for the color attribute.
     * @param color this is the variable name for the color being assgined to TeeShirt objects.
     */
    public void setColor(String color)
@@ -120,7 +125,7 @@ class TeeShirt
    }
    /**
     * *function name: getOrderNumber()
-    * this is the accessor method for orderNumber object attribute
+    * This is the accessor method for orderNumber object attribute.
     * @return (int) the orderNumber assigned
     */
    public int getOrderNumber()
@@ -129,7 +134,7 @@ class TeeShirt
    }
    /**
     * *function name: getSize()
-    * this is the accessor method for the size attritube.
+    * This is the accessor method for the size attritube.
     * @return (String) the size assigned
     */
    public String getSize()
@@ -138,7 +143,7 @@ class TeeShirt
    }
    /**
     * *function name: getColor()
-    * this is the accessor method for the color attribute
+    * This is the accessor method for the color attribute.
     * @return (string) the color assigned
     */
    public String getColor()
@@ -147,7 +152,7 @@ class TeeShirt
    }
    /**
     * *function name: getPrice()
-    * this is the accessor method for the price attribute. 
+    * This is the accessor method for the price attribute. 
     * @return (double) the price assigned
     */
    public double getPrice()
@@ -162,11 +167,11 @@ class TeeShirt
  */
 class CustomTee extends TeeShirt
 {
-   //this is a private attribute to hold the slogan variable assigned to a CustomTee object.
+   //This is a private attribute to hold the slogan variable assigned to a CustomTee object.
     private String slogan;
    /**
     * *function name: setSlogan()
-    *this is the mutator method for the slogan attribute.
+    *This is the mutator method for the slogan attribute.
     * @param slgn
     * 
    */ 
@@ -175,7 +180,7 @@ class CustomTee extends TeeShirt
        slogan = slgn; 
    }
    /**
-    * this is the accessor method for the slogan attribute. 
+    * This is the accessor method for the slogan attribute. 
     * @return (string) the custom slogan
     */
    public String getSlogan()
